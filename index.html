@@ -19,23 +19,30 @@
                 <img :src="business.imgsrc" :alt="business.imgalt"/>
                 <h2>{{ business.name }}</h2>
                 <p class="business_card_category">{{ business.category }}</p>
-                <ul class="business_card_info">
-                  <li>
-                    <a href={business.addresslink} target="_blank">
-                      <p>{{ business.address }}</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={business.websitelink} target="_blank">
-                      <p>{{ business.website }}</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={business.phonelink} target="_blank">
-                      <p>{{ business.phone }}</p>
-                    </a>
-                  </li>
-                </ul>
+                
+                
+                
+                
+                <div class="business_card_links_container">
+                    <div class="business_card_links_item">
+                        <img src="https://i.ibb.co/n3WR913/jesse-icon-pin.png">
+                        <a href={business.addresslink} target="_blank">
+                          <p>{{ business.address }}</p>
+                        </a>
+                    </div>
+                    <div class="business_card_links_item">
+                        <img src="https://i.ibb.co/wRvGvm8/jesse-icon-phone.png">
+                        <a href={business.websitelink} target="_blank">
+                          <p>{{ business.website }}</p>
+                        </a>
+                    </div>
+                    <div class="business_card_links_item">
+                        <img src="https://i.ibb.co/LNdTHh8/jesse-icon-web.png">
+                        <a href={business.phonelink} target="_blank">
+                          <p>{{ business.phone }}</p>
+                        </a>
+                    </div>
+                </div>
                 <ul class="business_card_tags">
                   <li>
                     <p>{{ business.tag1 }}</p>

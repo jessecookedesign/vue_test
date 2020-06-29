@@ -63,7 +63,7 @@ a {
   color: var(--color-orange);
 }
 
-/* Cards */
+/* Business cards */
 
 #main_card_container {
   display: flex;
@@ -73,12 +73,10 @@ a {
   max-width: 1000px;
 }
 
-/* Business cards */
-
 .business_card_container {
   padding: 30px;
   border: 2px solid #cecece;
-  width: 24%;
+  width: 40%;
   margin: 10px 0px;
 }
 
@@ -120,14 +118,33 @@ a {
   margin-bottom: 40px;
 }
 
-/* Business info */
+/* Business card links */
 
-.business_card_info {
-  padding: 0px 0px 0px 30px;
-  margin: 0;
+.business_card_links_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
-.business_card_info li p {
+.business_card_links_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0px;;
+}
+
+.business_card_links_item img {
+    padding: 0px 10px 0px 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.business_card_links_item a {
   font-size: 16px;
   color: var(--color-grey);
   border-left: 2px solid #cecece;
@@ -136,20 +153,8 @@ a {
   font-weight: 500;
 }
 
-.business_card_info li p:hover {
+.business_card_links_item a:hover {
   color: var(--color-orange);
-}
-
-.business_card_info li:nth-child(1) {
-  list-style-image: url(https://i.ibb.co/YT22J8H/jesse-react-icon-pin.png);
-}
-
-.business_card_info li:nth-child(2) {
-  list-style-image: url(https://i.ibb.co/K9ZqTjR/jesse-react-icon-website.png);
-}
-
-.business_card_info li:nth-child(3) {
-  list-style-image: url(https://i.ibb.co/n8cykLz/jesse-react-icon-phone.png);
 }
 
 /* Tags */
