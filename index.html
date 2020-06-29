@@ -19,9 +19,10 @@
             <button v-on:click="categoryFilter = 'web design'">web design</button>
             <button v-on:click="categoryFilter = 'undefined'">undefined</button>
         </div>
-        <template v-for="business in cardData" v-if="business.category == categoryFilter || categoryFilter == true">
+        
         <div id="main_card_container">
             <!-- START: Card Template -->
+            <template v-for="business in cardData" v-if="business.category == categoryFilter || categoryFilter == true">
             <div class="business_card_container">
                 <img :src="business.imgsrc" :alt="business.imgalt"/>
                 <h2>{{ business.name }}</h2>
@@ -55,9 +56,9 @@
                   </li>
                 </ul>
             </div>
+            </template>
             <!-- END: Card Template -->
-        </div>
-        </template>
+        </div
     </div>
 
     
