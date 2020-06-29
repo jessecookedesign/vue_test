@@ -13,9 +13,16 @@
 
 <body>
     <div id="app">
+        <div id="filter_buttons">
+            <button v-on:click="categoryFilter = true">View all</button>
+            <button v-on:click="categoryFilter = 'printing'">printing</button>
+            <button v-on:click="categoryFilter = 'web design'">web design</button>
+            <button v-on:click="categoryFilter = 'undefined'">undefined</button>
+        </div>
+        <template v-for="business in cardData" v-if="business.category == categoryFilter || categoryFilter == true">
         <div id="main_card_container">
             <!-- START: Card Template -->
-            <div v-for="business in cardData" class="business_card_container">
+            <div class="business_card_container">
                 <img :src="business.imgsrc" :alt="business.imgalt"/>
                 <h2>{{ business.name }}</h2>
                 <p class="business_card_category">{{ business.category }}</p>
@@ -50,10 +57,11 @@
             </div>
             <!-- END: Card Template -->
         </div>
+        </template>
     </div>
 
     
-    <!-- Begin Vue -->
+    <!-- Load Vue files -->
     <script src="./main.js"></script>
 </body>
 </html>

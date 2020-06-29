@@ -1,6 +1,7 @@
 var app = new Vue({
             el: '#app',
             data: {
+                categoryFilter: true,
                 cardData: [
                     {
                     imgsrc: "https://i.ibb.co/Lx9PLPx/ph-logo-mark-white-space.jpg",
@@ -33,7 +34,7 @@ var app = new Vue({
                     imgsrc: "https://i.ibb.co/SDg1gcW/yourlogohere.jpg",
                     imgalt: "Your logo here",
                     name: "Business Name",
-                    category: "category here",
+                    category: "undefined",
                     address: "702 E 3rd St, Duluth, MN 55805",
                     addresslink: "http://maps.google.com/?q=702 e 3rd st duluth mn 55805",
                     website: "example.com",
@@ -48,7 +49,7 @@ var app = new Vue({
                     imgsrc: "https://i.ibb.co/SDg1gcW/yourlogohere.jpg",
                     imgalt: "Your logo here",
                     name: "Business Name",
-                    category: "category here",
+                    category: "undefined",
                     address: "702 E 3rd St, Duluth, MN 55805",
                     addresslink: "http://maps.google.com/?q=702 e 3rd st duluth mn 55805",
                     website: "example.com",
