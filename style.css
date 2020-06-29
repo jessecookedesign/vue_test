@@ -1,0 +1,190 @@
+/* OVERALL STYLES */
+:root {
+  --color-grey-light: #868d9b;
+  --color-grey: #707070;
+  --color-grey-dark: #1f2024;
+  --color-offwhite: #f1f1f1;
+  --color-orange: #fb523e;
+  --color-blue: #0d577e;
+}
+
+::selection {
+  background: var(--color-grey-light);
+}
+
+::-moz-selection {
+  background: var(--color-grey-light);
+}
+
+body {
+  background-color: var(--color-offwhite);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: DM Sans, sans-serif;
+  font-weight: 700;
+  letter-spacing: -2px;
+  font-size: 70px;
+  line-height: 60px;
+  color: var(--color-grey-dark);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Main nav */
+.myNav {
+  width: 100%;
+  padding: 20px 0px;
+  background-color: var(--color-blue);
+}
+
+.myNav ul {
+  width: 50%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+.myNav li a {
+  color: var(--color-offwhite);
+  font-family: DM Sans, sans-serif;
+}
+
+.myNav li a:hover {
+  color: var(--color-orange);
+}
+
+/* Cards */
+
+#main_card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+/* Business cards */
+
+.business_card_container {
+  padding: 30px;
+  border: 2px solid #cecece;
+  width: 24%;
+  margin: 10px 0px;
+}
+
+.business_card_container:hover {
+  border: 2px solid var(--color-orange);
+}
+
+@media only screen and (max-width: 1000px) {
+  .business_card_container {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .business_card_container {
+    width: 70%;
+  }
+}
+
+.business_card_container img {
+  width: 70px;
+}
+
+.business_card_container h2 {
+  font-family: DM Sans, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: -2px;
+}
+
+.business_card_container .business_card_category {
+  font-size: 16px;
+  color: #6a6a6a;
+  font-family: Cousine, monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Business info */
+
+.business_card_info {
+  padding: 0px 0px 0px 30px;
+  margin: 0;
+}
+
+.business_card_info li p {
+  font-size: 16px;
+  color: var(--color-grey);
+  border-left: 2px solid #cecece;
+  padding-left: 14px;
+  font-family: DM Sans, sans-serif;
+  font-weight: 500;
+}
+
+.business_card_info li p:hover {
+  color: var(--color-orange);
+}
+
+.business_card_info li:nth-child(1) {
+  list-style-image: url(https://i.ibb.co/YT22J8H/jesse-react-icon-pin.png);
+}
+
+.business_card_info li:nth-child(2) {
+  list-style-image: url(https://i.ibb.co/K9ZqTjR/jesse-react-icon-website.png);
+}
+
+.business_card_info li:nth-child(3) {
+  list-style-image: url(https://i.ibb.co/n8cykLz/jesse-react-icon-phone.png);
+}
+
+/* Tags */
+
+.business_card_tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.business_card_tags li p {
+  font-size: 14px;
+  color: var(--color-blue);
+  border-bottom: 2px dashed var(--color-blue);
+  font-family: Cousine, monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.business_card_tags li:nth-child(2) {
+  padding-left: 20px;
+}
+
+.business_card_tags li p:hover {
+  border-bottom: 2px solid #0d577e;
+}
+
+/* Footer */
+
+.footer_text {
+  padding: 30px;
+  font-family: DM Sans, sans-serif;
+}

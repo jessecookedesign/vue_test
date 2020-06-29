@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+	<title>Jesse's Vue.js Project</title>
+	<link rel="stylesheet" href="style.css">
+    <!-- Load Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Vue.js - Dev Version -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="main_card_container">
+            <!-- START: Card Template -->
+            <div v-for="business in cardData" class="business_card_container">
+                <img :src="business.imgsrc" :alt="business.imgalt"/>
+                <h2>{{ business.name }}</h2>
+                <p className="business_card_category">{{ business.category }}</p>
+                <ul className="business_card_info">
+                  <li>
+                    <a href={business.addresslink} target="_blank">
+                      <p>{{ business.address }}</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={business.websitelink} target="_blank">
+                      <p>{{ business.website }}</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href={business.phonelink} target="_blank">
+                      <p>{{ business.phone }}</p>
+                    </a>
+                  </li>
+                </ul>
+                <ul className="business_card_tags">
+                  <li>
+                    <p>{{ business.tag1 }}</p>
+                  </li>
+                  <li>
+                    <p>{{ business.tag2 }}</p>
+                  </li>
+                </ul>
+            </div>
+            <!-- END: Card Template -->
+        </div>
+    </div>
+
+    
+    <!-- Begin Vue -->
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                cardData: [
+                    { imgsrc: "https://i.ibb.co/Lx9PLPx/ph-logo-mark-white-space.jpg", imgalt: "Pixl Haus logo", name: "Pixl Haus", category: "web design", address: "702 E 3rd St, Duluth, MN 55805", addresslink: "http://maps.google.com/?q=702 e 3rd st duluth mn 55805", website: "example.com", websitelink: "https://www.google.com", phone: "218-555-1234", phonelink: "tel: 1-218-555-5555", tag1: "freelancer", tag2: "creative"},
+                    { imgsrc: "https://i.ibb.co/Lx9PLPx/ph-logo-mark-white-space.jpg", imgalt: "Pixl Haus logo", name: "Pixl Haus", category: "web design", address: "702 E 3rd St, Duluth, MN 55805", addresslink: "http://maps.google.com/?q=702 e 3rd st duluth mn 55805", website: "example.com", websitelink: "https://www.google.com", phone: "218-555-1234", phonelink: "tel: 1-218-555-5555", tag1: "freelancer", tag2: "creative"}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
