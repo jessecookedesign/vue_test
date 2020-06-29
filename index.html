@@ -2,21 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 	<title>Jesse's Vue.js Project</title>
 	<link rel="stylesheet" href="style.css">
     <!-- Load Google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap" rel="stylesheet"/>
     <!-- Load Vue.js - Dev Version -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -28,8 +18,8 @@
             <div v-for="business in cardData" class="business_card_container">
                 <img :src="business.imgsrc" :alt="business.imgalt"/>
                 <h2>{{ business.name }}</h2>
-                <p className="business_card_category">{{ business.category }}</p>
-                <ul className="business_card_info">
+                <p class="business_card_category">{{ business.category }}</p>
+                <ul class="business_card_info">
                   <li>
                     <a href={business.addresslink} target="_blank">
                       <p>{{ business.address }}</p>
@@ -46,7 +36,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul className="business_card_tags">
+                <ul class="business_card_tags">
                   <li>
                     <p>{{ business.tag1 }}</p>
                   </li>
