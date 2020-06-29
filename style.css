@@ -74,14 +74,19 @@ a {
 }
 
 .business_card_container {
-  padding: 30px;
-  border: 2px solid #cecece;
-  width: 40%;
-  margin: 10px 0px;
+    padding: 30px;
+    width: 40%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 4px 4px #eee;
+    transition: 0.7s;
 }
 
 .business_card_container:hover {
-  border: 2px solid var(--color-orange);
+    transform: translateY(-3px);
+    transition: 0.7s;
+    box-shadow: 4px 4px 4px #ddd;
 }
 
 @media only screen and (max-width: 1000px) {
